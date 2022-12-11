@@ -1,5 +1,5 @@
-using GameComponentAttributes;
 using GameComponentAttributes.Attributes;
+using GameJamEntry.MainMenu.ScreenControl;
 using GameJamEntry.Utils;
 #if UNITY_EDITOR
 using UnityEditor;
@@ -10,16 +10,22 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace  GameJamEntry.MainMenu.UI {
-	public class MainMenu : GameComponent {
+	public class MainMenuScreen : BaseScreen {
 		[NotNull] public Button PlayButton;
 		[NotNull] public Button SettingsButton;
 		[NotNull] public Button ExitButton;
 
-		protected void Start() {
+		ScreenManager _screenManager;
+
+		public void Init(ScreenManager screenManager) {
+			_screenManager = screenManager;
 			PlayButton.RemoveAllAndAddListener(() => SceneManager.LoadScene("Gameplay"));
-			//TODO: remove this line and add an action to the settings button 
-			SettingsButton.gameObject.SetActive(false);
+			SettingsButton.RemoveAllAndAddListener(ShowSettingsWindow);
 			ExitButton.RemoveAllAndAddListener(Exit);
+		}
+
+		void ShowSettingsWindow() {
+			_screenManager.ShowScreen<SettingsScreen>(x => x.Init(_screenManager)).Forget();
 		}
 
 		void Exit() {
