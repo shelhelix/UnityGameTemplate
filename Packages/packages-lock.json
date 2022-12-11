@@ -14,14 +14,14 @@
       "dependencies": {
         "com.cysharp.unitask": "2.3.1"
       },
-      "hash": "b7ab4d464cc9e056507b1b5dac1381e77834ec1f"
+      "hash": "2a59bf520c65b9ddcd4861eebdbcf1e49f75de8b"
     },
     "com.ultrashel.gamecomponentattributes": {
       "version": "https://github.com/shelhelix/GameComponentAttributes.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "6b5dd9ad58bacc53807fa2ea87f3c903533ee635"
+      "hash": "9810bfa18bcd1b4e85a0e46801911fbb4ef9d643"
     },
     "com.unity.2d.animation": {
       "version": "7.0.9",
