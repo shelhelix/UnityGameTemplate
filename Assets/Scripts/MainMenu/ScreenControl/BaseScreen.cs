@@ -12,13 +12,13 @@ namespace GameJamEntry.MainMenu.ScreenControl {
 
 		public async UniTask Show() {
 			CanvasGroup.blocksRaycasts = false;
-			 await CanvasGroup.DOFade(1, 0.5f);
-			 CanvasGroup.blocksRaycasts = true;
+			await CanvasGroup.DOFade(1, 0.3f);
+			CanvasGroup.blocksRaycasts = true;
 		}
 
 		public async UniTask Hide() {
 			CanvasGroup.blocksRaycasts = false;
-			await CanvasGroup.DOFade(0, 0.5f);
+			await CanvasGroup.DOFade(0, 0.3f);
 		}
 	}
 }

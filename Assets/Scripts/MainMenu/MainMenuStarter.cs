@@ -2,14 +2,23 @@
 using GameComponentAttributes.Attributes;
 using GameJamEntry.MainMenu.ScreenControl;
 using GameJamEntry.MainMenu.UI;
+using UnityEngine;
 
 namespace GameJamEntry.MainMenu {
 	public class MainMenuStarter : GameComponent {
-		[NotNull] public ScreenManager ScreenManager;
-			
+		[NotNull] [SerializeField] ScreenManager ScreenManager;
+		[NotNull] [SerializeField] SoundHelper   SoundHelper;
+
+		SystemSettingsController SettingsController => GameState.Instance.SystemSettingsController;
+		
 		protected void Start() {
 			ScreenManager.Init();
-			ScreenManager.ShowScreen<MainMenuScreen>(x => x.Init(ScreenManager)).Forget();
+			SoundHelper.Init(SettingsController);
+			ScreenManager.ShowScreen<MainMenuScreen>(x => x.Init(ScreenManager, SettingsController)).Forget();
+		}
+
+		protected void OnDestroy() {
+			SoundHelper.Deinit();
 		}
 	}
 }

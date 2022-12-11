@@ -11,21 +11,19 @@ using UnityEngine.UI;
 
 namespace  GameJamEntry.MainMenu.UI {
 	public class MainMenuScreen : BaseScreen {
-		[NotNull] public Button PlayButton;
-		[NotNull] public Button SettingsButton;
-		[NotNull] public Button ExitButton;
+		const string JamLink           = "add link to jam here";
+		const string GameplaySceneName = "Gameplay";
+		
+		[NotNull] [SerializeField] Button PlayButton;
+		[NotNull] [SerializeField] Button SettingsButton;
+		[NotNull] [SerializeField] Button JamLinkButton;
+		[NotNull] [SerializeField] Button ExitButton;
 
-		ScreenManager _screenManager;
-
-		public void Init(ScreenManager screenManager) {
-			_screenManager = screenManager;
-			PlayButton.RemoveAllAndAddListener(() => SceneManager.LoadScene("Gameplay"));
-			SettingsButton.RemoveAllAndAddListener(ShowSettingsWindow);
+		public void Init(ScreenManager screenManager, SystemSettingsController settingsController) {
+			PlayButton.RemoveAllAndAddListener(() => SceneManager.LoadScene(GameplaySceneName));
+			SettingsButton.RemoveAllAndAddListener(() => screenManager.ShowScreen<SettingsScreen>(x => x.Init(screenManager, settingsController)).Forget());
+			JamLinkButton.RemoveAllAndAddListener(() => Application.OpenURL(JamLink));
 			ExitButton.RemoveAllAndAddListener(Exit);
-		}
-
-		void ShowSettingsWindow() {
-			_screenManager.ShowScreen<SettingsScreen>(x => x.Init(_screenManager)).Forget();
 		}
 
 		void Exit() {
