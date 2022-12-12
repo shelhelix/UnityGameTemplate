@@ -10,11 +10,17 @@ namespace GameJamEntry.MainMenu {
 		[NotNull] [SerializeField] SoundHelper   SoundHelper;
 
 		SystemSettingsController SettingsController => GameState.Instance.SystemSettingsController;
+
+		SceneLoader _sceneLoader;
+
+		ScreenHelper _screenHelper;
 		
 		protected void Start() {
+			_sceneLoader  = new SceneLoader(FadeSceneTransition.Instance);
+			_screenHelper = new ScreenHelper(ScreenManager, SettingsController, _sceneLoader);
 			ScreenManager.Init();
 			SoundHelper.Init(SettingsController);
-			ScreenManager.ShowScreen<MainMenuScreen>(x => x.Init(ScreenManager, SettingsController)).Forget();
+			_screenHelper.ShowMainMenuScreen();
 		}
 
 		protected void OnDestroy() {

@@ -10,21 +10,12 @@ namespace GameJamEntry.MainMenu.UI {
 		[NotNull] [SerializeField] SoundSettingsBlock masterSettingsBlocks;
 		[NotNull] [SerializeField] SoundSettingsBlock musicSettingsBlocks;
 		[NotNull] [SerializeField] SoundSettingsBlock sfxSettingsBlocks;
-
-		ScreenManager            _screenManager;
-		SystemSettingsController _systemSettingsController;
 		
-		public void Init(ScreenManager manager, SystemSettingsController settingsController) {
-			_screenManager            = manager;
-			_systemSettingsController = settingsController;
-			ReturnButton.RemoveAllAndAddListener(ShowMainMenu);
+		public void Init(ScreenHelper helper, SystemSettingsController settingsController) {
+			ReturnButton.RemoveAllAndAddListener(helper.ShowMainMenuScreen);
 			masterSettingsBlocks.Init(settingsController, MixerParamName.MasterVolume);
 			musicSettingsBlocks.Init(settingsController, MixerParamName.MusicVolume);
 			sfxSettingsBlocks.Init(settingsController, MixerParamName.SfxVolume);
-		}
-
-		void ShowMainMenu() {
-			_screenManager.ShowScreen<MainMenuScreen>(x => x.Init(_screenManager, _systemSettingsController)).Forget();
 		}
 	}
 }

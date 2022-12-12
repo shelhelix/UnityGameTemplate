@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using GameComponentAttributes.Attributes;
 using GameJamEntry.MainMenu.ScreenControl;
 using GameJamEntry.Utils;
@@ -6,7 +7,6 @@ using UnityEditor;
 #endif
 // ReSharper disable once RedundantUsingDirective
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace  GameJamEntry.MainMenu.UI {
@@ -19,9 +19,9 @@ namespace  GameJamEntry.MainMenu.UI {
 		[NotNull] [SerializeField] Button JamLinkButton;
 		[NotNull] [SerializeField] Button ExitButton;
 
-		public void Init(ScreenManager screenManager, SystemSettingsController settingsController) {
-			PlayButton.RemoveAllAndAddListener(() => SceneManager.LoadScene(GameplaySceneName));
-			SettingsButton.RemoveAllAndAddListener(() => screenManager.ShowScreen<SettingsScreen>(x => x.Init(screenManager, settingsController)).Forget());
+		public void Init(ScreenHelper screenHelper, SystemSettingsController settingsController, SceneLoader sceneLoader) {
+			PlayButton.RemoveAllAndAddListener(() => sceneLoader.LoadScene(GameplaySceneName).Forget());
+			SettingsButton.RemoveAllAndAddListener(screenHelper.ShowSettingsScreen);
 			JamLinkButton.RemoveAllAndAddListener(() => Application.OpenURL(JamLink));
 			ExitButton.RemoveAllAndAddListener(Exit);
 		}
