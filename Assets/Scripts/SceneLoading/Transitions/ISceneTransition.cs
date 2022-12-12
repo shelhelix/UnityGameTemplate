@@ -1,6 +1,6 @@
 ﻿using Cysharp.Threading.Tasks;
 
-namespace GameJamEntry {
+namespace GameJamEntry.SceneLoading.Transitions {
 	public interface ISceneTransition {
 		public UniTask HideScenes();
 		public UniTask ShowScenes();

@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace GameJamEntry {
+namespace GameJamEntry.Gameplay {
 	public enum MixerParamName {
 		MasterVolume = 1,
 		MusicVolume = 2,

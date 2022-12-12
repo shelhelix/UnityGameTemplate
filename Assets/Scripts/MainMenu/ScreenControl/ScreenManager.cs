@@ -4,6 +4,7 @@ using Cysharp.Threading.Tasks;
 using GameComponentAttributes;
 using GameComponentAttributes.Attributes;
 using GameJamEntry.MainMenu.UI;
+using GameJamEntry.MainMenu.UI.Settings;
 using UnityEngine;
 
 namespace GameJamEntry.MainMenu.ScreenControl {

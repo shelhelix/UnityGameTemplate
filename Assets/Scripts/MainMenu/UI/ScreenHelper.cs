@@ -1,4 +1,7 @@
-﻿using GameJamEntry.MainMenu.ScreenControl;
+﻿using GameJamEntry.Gameplay;
+using GameJamEntry.MainMenu.ScreenControl;
+using GameJamEntry.MainMenu.UI.Settings;
+using GameJamEntry.SceneLoading;
 
 namespace GameJamEntry.MainMenu.UI {
 	public class ScreenHelper {

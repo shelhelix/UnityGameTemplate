@@ -1,6 +1,7 @@
 ﻿using System;
 using GameComponentAttributes;
 using GameComponentAttributes.Attributes;
+using GameJamEntry.Gameplay;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -10,7 +11,6 @@ namespace GameJamEntry.MainMenu {
 
 		SystemSettingsController _systemSettingsController;
 		
-
 		public void Init(SystemSettingsController settingsController) {
 			_systemSettingsController                     =  settingsController;
 			_systemSettingsController.OnSoundParamChanged += OnSoundParamChanged;

@@ -1,10 +1,11 @@
 ﻿using GameComponentAttributes.Attributes;
+using GameJamEntry.Gameplay;
 using GameJamEntry.MainMenu.ScreenControl;
 using GameJamEntry.Utils;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace GameJamEntry.MainMenu.UI {
+namespace GameJamEntry.MainMenu.UI.Settings {
 	public class SettingsScreen : BaseScreen {
 		[NotNull] [SerializeField] Button             ReturnButton;
 		[NotNull] [SerializeField] SoundSettingsBlock masterSettingsBlocks;

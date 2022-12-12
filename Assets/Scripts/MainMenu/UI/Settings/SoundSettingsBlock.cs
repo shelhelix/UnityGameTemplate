@@ -1,9 +1,10 @@
 ﻿using GameComponentAttributes;
 using GameComponentAttributes.Attributes;
+using GameJamEntry.Gameplay;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace GameJamEntry.MainMenu.UI {
+namespace GameJamEntry.MainMenu.UI.Settings {
 	public class SoundSettingsBlock : GameComponent {
 		[NotNull] [SerializeField] Slider Slider;
 
