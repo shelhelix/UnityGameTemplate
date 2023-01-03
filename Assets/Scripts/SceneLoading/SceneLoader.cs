@@ -1,9 +1,10 @@
 ﻿using Cysharp.Threading.Tasks;
+using GameJamEntry.SceneLoading.Transitions;
 using UnityEngine.SceneManagement;
 
-namespace GameJamEntry {
+namespace GameJamEntry.SceneLoading {
 	public class SceneLoader {
-		ISceneTransition _transition;
+		readonly ISceneTransition _transition;
 
 		public SceneLoader(ISceneTransition transition) => _transition = transition;
 

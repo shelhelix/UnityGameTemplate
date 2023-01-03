@@ -1,4 +1,4 @@
-﻿namespace GameJamEntry {
+﻿namespace GameJamEntry.Gameplay {
 	public class GameState {
 		public SystemSettingsController SystemSettingsController = new();
 		
