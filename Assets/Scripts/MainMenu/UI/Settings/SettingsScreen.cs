@@ -7,10 +7,10 @@ using UnityEngine.UI;
 
 namespace GameJamEntry.MainMenu.UI.Settings {
 	public class SettingsScreen : BaseScreen {
-		[NotNull] [SerializeField] Button             ReturnButton;
-		[NotNull] [SerializeField] SoundSettingsBlock masterSettingsBlocks;
-		[NotNull] [SerializeField] SoundSettingsBlock musicSettingsBlocks;
-		[NotNull] [SerializeField] SoundSettingsBlock sfxSettingsBlocks;
+		[NotNullReference] [SerializeField] Button             ReturnButton;
+		[NotNullReference] [SerializeField] SoundSettingsBlock masterSettingsBlocks;
+		[NotNullReference] [SerializeField] SoundSettingsBlock musicSettingsBlocks;
+		[NotNullReference] [SerializeField] SoundSettingsBlock sfxSettingsBlocks;
 		
 		public void Init(ScreenHelper helper, SystemSettingsController settingsController) {
 			ReturnButton.RemoveAllAndAddListener(helper.ShowMainMenuScreen);

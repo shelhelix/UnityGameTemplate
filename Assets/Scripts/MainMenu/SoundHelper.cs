@@ -6,8 +6,8 @@ using UnityEngine;
 using UnityEngine.Audio;
 
 namespace GameJamEntry.MainMenu {
-	public class SoundHelper : GameComponent {
-		[NotNull] [SerializeField] AudioMixer Mixer;
+	public class SoundHelper : MonoBehaviour {
+		[NotNullReference] [SerializeField] AudioMixer Mixer;
 
 		SystemSettingsController _systemSettingsController;
 		

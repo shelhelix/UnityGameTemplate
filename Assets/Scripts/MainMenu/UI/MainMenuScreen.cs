@@ -16,10 +16,10 @@ namespace  GameJamEntry.MainMenu.UI {
 		const string JamLink           = "add link to jam here";
 		const string GameplaySceneName = "Gameplay";
 		
-		[NotNull] [SerializeField] Button PlayButton;
-		[NotNull] [SerializeField] Button SettingsButton;
-		[NotNull] [SerializeField] Button JamLinkButton;
-		[NotNull] [SerializeField] Button ExitButton;
+		[NotNullReference] [SerializeField] Button PlayButton;
+		[NotNullReference] [SerializeField] Button SettingsButton;
+		[NotNullReference] [SerializeField] Button JamLinkButton;
+		[NotNullReference] [SerializeField] Button ExitButton;
 
 		public void Init(ScreenHelper screenHelper, SystemSettingsController settingsController, SceneLoader sceneLoader) {
 			PlayButton.RemoveAllAndAddListener(() => sceneLoader.LoadScene(GameplaySceneName).Forget());

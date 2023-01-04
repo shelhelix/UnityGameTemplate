@@ -6,8 +6,8 @@ using UnityEngine;
 
 namespace GameJamEntry.SceneLoading.Transitions {
 	public class FadeSceneTransition : SceneTransitionSingleton<FadeSceneTransition> {
-		[NotNull] public Canvas      Canvas;
-		[NotNull] public CanvasGroup CanvasGroup;
+		[NotNullReference] public Canvas      Canvas;
+		[NotNullReference] public CanvasGroup CanvasGroup;
 
 		protected void Start() {
 			Canvas.gameObject.SetActive(false);

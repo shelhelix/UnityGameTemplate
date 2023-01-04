@@ -3,7 +3,7 @@ using GameComponentAttributes;
 using UnityEngine;
 
 namespace GameJamEntry.SceneLoading.Transitions {
-	public abstract class SceneTransitionSingleton<T> : GameComponent, ISceneTransition where T : GameComponent {
+	public abstract class SceneTransitionSingleton<T> : MonoBehaviour, ISceneTransition where T : MonoBehaviour {
 		static T _instance;
 
 		public static T Instance {

@@ -8,9 +8,9 @@ using GameJamEntry.MainMenu.UI.Settings;
 using UnityEngine;
 
 namespace GameJamEntry.MainMenu.ScreenControl {
-	public class ScreenManager : GameComponent {
-		[NotNull] [SerializeField] MainMenuScreen MainScreen;
-		[NotNull] [SerializeField] SettingsScreen SettingsScreen;
+	public class ScreenManager : MonoBehaviour {
+		[NotNullReference] [SerializeField] MainMenuScreen MainScreen;
+		[NotNullReference] [SerializeField] SettingsScreen SettingsScreen;
 
 		List<BaseScreen> _allScreens;
 

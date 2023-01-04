@@ -5,8 +5,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 namespace GameJamEntry.MainMenu.UI.Settings {
-	public class SoundSettingsBlock : GameComponent {
-		[NotNull] [SerializeField] Slider Slider;
+	public class SoundSettingsBlock : MonoBehaviour {
+		[NotNullReference] [SerializeField] Slider Slider;
 
 		SystemSettingsController _controller;
 		MixerParamName           _mixerParamName;

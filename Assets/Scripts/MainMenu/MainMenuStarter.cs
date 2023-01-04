@@ -8,9 +8,9 @@ using GameJamEntry.SceneLoading.Transitions;
 using UnityEngine;
 
 namespace GameJamEntry.MainMenu {
-	public class MainMenuStarter : GameComponent {
-		[NotNull] [SerializeField] ScreenManager ScreenManager;
-		[NotNull] [SerializeField] SoundHelper   SoundHelper;
+	public class MainMenuStarter : MonoBehaviour {
+		[NotNullReference] [SerializeField] ScreenManager ScreenManager;
+		[NotNullReference] [SerializeField] SoundHelper   SoundHelper;
 
 		SystemSettingsController SettingsController => GameState.Instance.SystemSettingsController;
 

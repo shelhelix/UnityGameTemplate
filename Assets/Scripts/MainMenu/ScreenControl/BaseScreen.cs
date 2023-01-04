@@ -6,9 +6,9 @@ using NaughtyAttributes;
 using UnityEngine;
 
 namespace GameJamEntry.MainMenu.ScreenControl {
-	public class BaseScreen : GameComponent {
+	public class BaseScreen : MonoBehaviour {
 		[BoxGroup("transition params")]
-		[NotNull] public CanvasGroup CanvasGroup;
+		[NotNullReference] public CanvasGroup CanvasGroup;
 
 		public async UniTask Show() {
 			CanvasGroup.blocksRaycasts = false;

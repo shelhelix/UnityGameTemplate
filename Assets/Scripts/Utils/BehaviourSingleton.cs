@@ -2,7 +2,7 @@
 using UnityEngine;
 
 namespace GameJamEntry.Utils {
-	public class BehaviourSingleton<T> : GameComponent where T : MonoBehaviour {
+	public class BehaviourSingleton<T> : MonoBehaviour where T : MonoBehaviour {
 		static T _instance;
 
 		public static bool HasInstance => _instance;
