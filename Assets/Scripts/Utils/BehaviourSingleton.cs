@@ -1,5 +1,4 @@
-﻿using GameComponentAttributes;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace GameJamEntry.Utils {
 	public class BehaviourSingleton<T> : MonoBehaviour where T : MonoBehaviour {

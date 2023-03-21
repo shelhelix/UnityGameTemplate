@@ -1,7 +1,6 @@
 ﻿using System;
-using GameComponentAttributes;
 using GameComponentAttributes.Attributes;
-using GameJamEntry.Gameplay;
+using GameJamEntry.General;
 using UnityEngine;
 using UnityEngine.Audio;
 

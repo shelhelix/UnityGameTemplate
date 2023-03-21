@@ -1,6 +1,5 @@
-﻿using GameComponentAttributes;
-using GameComponentAttributes.Attributes;
-using GameJamEntry.Gameplay;
+﻿using GameComponentAttributes.Attributes;
+using GameJamEntry.General;
 using UnityEngine;
 using UnityEngine.UI;
 

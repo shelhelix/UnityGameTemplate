@@ -1,7 +1,7 @@
-﻿using GameJamEntry.Gameplay;
+﻿using GameJamEntry.General;
+using GameJamEntry.MainMenu.SceneLoading;
 using GameJamEntry.MainMenu.ScreenControl;
 using GameJamEntry.MainMenu.UI.Settings;
-using GameJamEntry.SceneLoading;
 
 namespace GameJamEntry.MainMenu.UI {
 	public class ScreenHelper {
@@ -16,7 +16,7 @@ namespace GameJamEntry.MainMenu.UI {
 		}
 		
 		public void ShowMainMenuScreen() {
-			_screenManager.ShowScreen<MainMenuScreen>(x => x.Init(this, _systemSettingsController, _sceneLoader)).Forget();
+			_screenManager.ShowScreen<MainMenuScreen>(x => x.Init(this, _sceneLoader)).Forget();
 		}
 
 		public void ShowSettingsScreen() {

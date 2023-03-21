@@ -1,6 +1,6 @@
 ﻿using Cysharp.Threading.Tasks;
 
-namespace GameJamEntry.SceneLoading.Transitions {
+namespace GameJamEntry.MainMenu.SceneLoading.Transitions {
 	public class FakeSceneTransition : SceneTransitionSingleton<FakeSceneTransition> {
 		public override UniTask HideScenes() => UniTask.CompletedTask;
 

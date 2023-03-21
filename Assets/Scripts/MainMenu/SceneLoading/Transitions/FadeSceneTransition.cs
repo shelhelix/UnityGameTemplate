@@ -4,7 +4,7 @@ using GameComponentAttributes.Attributes;
 using GameJamEntry.Utils;
 using UnityEngine;
 
-namespace GameJamEntry.SceneLoading.Transitions {
+namespace GameJamEntry.MainMenu.SceneLoading.Transitions {
 	public class FadeSceneTransition : SceneTransitionSingleton<FadeSceneTransition> {
 		[NotNullReference] public Canvas      Canvas;
 		[NotNullReference] public CanvasGroup CanvasGroup;

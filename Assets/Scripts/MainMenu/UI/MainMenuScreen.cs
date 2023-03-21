@@ -1,8 +1,7 @@
 using Cysharp.Threading.Tasks;
 using GameComponentAttributes.Attributes;
-using GameJamEntry.Gameplay;
+using GameJamEntry.MainMenu.SceneLoading;
 using GameJamEntry.MainMenu.ScreenControl;
-using GameJamEntry.SceneLoading;
 using GameJamEntry.Utils;
 #if UNITY_EDITOR
 using UnityEditor;
@@ -21,7 +20,7 @@ namespace  GameJamEntry.MainMenu.UI {
 		[NotNullReference] [SerializeField] Button JamLinkButton;
 		[NotNullReference] [SerializeField] Button ExitButton;
 
-		public void Init(ScreenHelper screenHelper, SystemSettingsController settingsController, SceneLoader sceneLoader) {
+		public void Init(ScreenHelper screenHelper, SceneLoader sceneLoader) {
 			PlayButton.RemoveAllAndAddListener(() => sceneLoader.LoadScene(GameplaySceneName).Forget());
 			SettingsButton.RemoveAllAndAddListener(screenHelper.ShowSettingsScreen);
 			JamLinkButton.RemoveAllAndAddListener(() => Application.OpenURL(JamLink));

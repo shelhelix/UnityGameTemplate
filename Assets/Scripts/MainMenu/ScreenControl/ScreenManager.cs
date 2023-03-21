@@ -1,27 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
-using GameComponentAttributes;
 using GameComponentAttributes.Attributes;
-using GameJamEntry.MainMenu.UI;
-using GameJamEntry.MainMenu.UI.Settings;
 using UnityEngine;
 
 namespace GameJamEntry.MainMenu.ScreenControl {
 	public class ScreenManager : MonoBehaviour {
-		[NotNullReference] [SerializeField] MainMenuScreen MainScreen;
-		[NotNullReference] [SerializeField] SettingsScreen SettingsScreen;
-
-		List<BaseScreen> _allScreens;
+		[NotNullReference] [SerializeField] List<BaseScreen> Screens;
 
 		bool _inTransit;
 		
 		public void Init() {
-			_allScreens = new List<BaseScreen> {
-				MainScreen,
-				SettingsScreen,
-			};
-			_allScreens.ForEach(FirstInit);
+			Screens.ForEach(FirstInit);
 		}
 
 		public void Deinit() {
@@ -32,11 +22,12 @@ namespace GameJamEntry.MainMenu.ScreenControl {
 			if ( _inTransit ) {
 				return;
 			}
-			if ( _allScreens.Find(x => x is T) is not T neededScreen ) {
+			var neededScreen = Screens.Find(x => x is T) as T;
+			if ( !neededScreen ) {
 				return;
 			}
 			_inTransit = true;
-			var hideTasks = _allScreens.Select(x => x.Hide());
+			var hideTasks = Screens.Select(x => x.Hide());
 			await UniTask.WhenAll(hideTasks);
 			initAction?.Invoke(neededScreen);
 			await neededScreen.Show();

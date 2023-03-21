@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GameJamEntry.Gameplay {
+namespace GameJamEntry.General {
 	[Serializable]
 	public class SystemSettingsState {
 		public List<MixerEntry> Entries = new();

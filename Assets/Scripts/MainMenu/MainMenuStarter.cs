@@ -1,10 +1,9 @@
-﻿using GameComponentAttributes;
-using GameComponentAttributes.Attributes;
-using GameJamEntry.Gameplay;
+﻿using GameComponentAttributes.Attributes;
+using GameJamEntry.General;
+using GameJamEntry.MainMenu.SceneLoading;
+using GameJamEntry.MainMenu.SceneLoading.Transitions;
 using GameJamEntry.MainMenu.ScreenControl;
 using GameJamEntry.MainMenu.UI;
-using GameJamEntry.SceneLoading;
-using GameJamEntry.SceneLoading.Transitions;
 using UnityEngine;
 
 namespace GameJamEntry.MainMenu {

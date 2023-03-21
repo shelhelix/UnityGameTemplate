@@ -1029,9 +1029,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CanvasGroup: {fileID: 1038565075}
   ReturnButton: {fileID: 336067860}
-  masterSettingsBlocks: {fileID: 302933374596176442}
-  musicSettingsBlocks: {fileID: 1817223038}
-  sfxSettingsBlocks: {fileID: 1638764033}
+  MasterSettingsBlocks: {fileID: 302933374596176442}
+  MusicSettingsBlocks: {fileID: 1817223038}
+  SfxSettingsBlocks: {fileID: 1638764033}
 --- !u!1 &1096304805
 GameObject:
   m_ObjectHideFlags: 0
@@ -1147,8 +1147,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2254db9947e44ece92b9651defcb368a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainScreen: {fileID: 1245396579}
-  SettingsScreen: {fileID: 1038565078}
+  Screens:
+  - {fileID: 1245396579}
+  - {fileID: 1038565078}
 --- !u!1 &1161312961
 GameObject:
   m_ObjectHideFlags: 0

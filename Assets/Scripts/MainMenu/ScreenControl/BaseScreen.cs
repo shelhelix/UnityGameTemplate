@@ -1,6 +1,5 @@
 ﻿using Cysharp.Threading.Tasks;
 using DG.Tweening;
-using GameComponentAttributes;
 using GameComponentAttributes.Attributes;
 using NaughtyAttributes;
 using UnityEngine;
