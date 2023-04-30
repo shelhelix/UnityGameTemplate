@@ -3,26 +3,28 @@ using GameComponentAttributes.Attributes;
 using GameJamEntry.General;
 using UnityEngine;
 using UnityEngine.Audio;
+using VContainer;
 
 namespace GameJamEntry.MainMenu {
-	public class SoundHelper : MonoBehaviour {
+	public class SoundHelper : MonoBehaviour, IDisposable {
 		[NotNullReference] [SerializeField] AudioMixer Mixer;
 
 		SystemSettingsController _systemSettingsController;
 		
+		[Inject]
 		public void Init(SystemSettingsController settingsController) {
 			_systemSettingsController                     =  settingsController;
 			_systemSettingsController.OnSoundParamChanged += OnSoundParamChanged;
 			UpdateValues();
 		}
 
-		public void Deinit() {
+		public void Dispose() {
 			if ( _systemSettingsController == null ) {
 				return;
 			}
 			_systemSettingsController.OnSoundParamChanged -= OnSoundParamChanged;
 		}
-
+		
 		void OnSoundParamChanged((MixerParamName name, float value) paramChanged) {
 			UpdateValues();
 		}

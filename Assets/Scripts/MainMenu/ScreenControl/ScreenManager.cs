@@ -9,13 +9,9 @@ namespace GameJamEntry.MainMenu.ScreenControl {
 		[NotNullReference] [SerializeField] List<BaseScreen> Screens;
 
 		bool _inTransit;
-		
+
 		public void Init() {
 			Screens.ForEach(FirstInit);
-		}
-
-		public void Deinit() {
-			
 		}
 
 		public async UniTaskVoid ShowScreen<T>(Action<T> initAction = null) where T : BaseScreen {
@@ -36,8 +32,7 @@ namespace GameJamEntry.MainMenu.ScreenControl {
 
 		void FirstInit(BaseScreen screen) {
 			screen.gameObject.SetActive(true);
-			screen.CanvasGroup.alpha          = 0;
-			screen.CanvasGroup.blocksRaycasts = false;
+			screen.HideImmediately();
 		}
 	}
 }

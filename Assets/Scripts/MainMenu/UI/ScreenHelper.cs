@@ -13,6 +13,7 @@ namespace GameJamEntry.MainMenu.UI {
 			_screenManager            = screenManager;
 			_systemSettingsController = settingsController;
 			_sceneLoader              = sceneLoader;
+			screenManager.Init();
 		}
 		
 		public void ShowMainMenuScreen() {
