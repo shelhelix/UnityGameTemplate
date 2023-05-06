@@ -1,6 +1,6 @@
-﻿using GameComponentAttributes.Attributes;
+﻿using Com.Shelinc.FullscreenCanvasController;
+using GameComponentAttributes.Attributes;
 using GameJamEntry.General;
-using GameJamEntry.MainMenu.ScreenControl;
 using GameJamEntry.Utils;
 using UnityEngine;
 using UnityEngine.UI;

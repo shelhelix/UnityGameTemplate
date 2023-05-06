@@ -1,12 +1,11 @@
 ﻿using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using GameComponentAttributes.Attributes;
-using NaughtyAttributes;
 using UnityEngine;
 
-namespace GameJamEntry.MainMenu.ScreenControl {
+namespace Com.Shelinc.FullscreenCanvasController {
 	public class BaseScreen : MonoBehaviour {
-		[BoxGroup("transition params")]
+		[Header("transition params")]
 		[NotNullReference] public CanvasGroup CanvasGroup;
 
 		public async UniTask Show() {

@@ -4,7 +4,7 @@ using Cysharp.Threading.Tasks;
 using GameComponentAttributes.Attributes;
 using UnityEngine;
 
-namespace GameJamEntry.MainMenu.ScreenControl {
+namespace Com.Shelinc.FullscreenCanvasController {
 	public class ScreenManager : MonoBehaviour {
 		[NotNullReference] [SerializeField] List<BaseScreen> Screens;
 

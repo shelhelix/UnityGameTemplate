@@ -1,7 +1,7 @@
 ﻿using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-namespace GameJamEntry.MainMenu.SceneLoading.Transitions {
+namespace Com.Shelinc.SceneTransitionEffects.Transitions  {
 	public abstract class SceneTransitionSingleton<T> : MonoBehaviour, ISceneTransition where T : MonoBehaviour {
 		static T _instance;
 

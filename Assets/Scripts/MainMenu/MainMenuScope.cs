@@ -1,8 +1,9 @@
-﻿using GameComponentAttributes.Attributes;
+﻿using Com.Shelinc.FullscreenCanvasController;
+using Com.Shelinc.SceneTransitionEffects;
+using Com.Shelinc.SceneTransitionEffects.Transitions;
+using Com.Shelinc.SceneTransitionEffects.Transitions.Implementations;
+using GameComponentAttributes.Attributes;
 using GameJamEntry.General;
-using GameJamEntry.MainMenu.SceneLoading;
-using GameJamEntry.MainMenu.SceneLoading.Transitions;
-using GameJamEntry.MainMenu.ScreenControl;
 using GameJamEntry.MainMenu.UI;
 using UnityEngine;
 using VContainer;

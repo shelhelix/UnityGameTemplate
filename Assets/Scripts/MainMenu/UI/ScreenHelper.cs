@@ -1,6 +1,6 @@
-﻿using GameJamEntry.General;
-using GameJamEntry.MainMenu.SceneLoading;
-using GameJamEntry.MainMenu.ScreenControl;
+﻿using Com.Shelinc.FullscreenCanvasController;
+using Com.Shelinc.SceneTransitionEffects;
+using GameJamEntry.General;
 using GameJamEntry.MainMenu.UI.Settings;
 
 namespace GameJamEntry.MainMenu.UI {

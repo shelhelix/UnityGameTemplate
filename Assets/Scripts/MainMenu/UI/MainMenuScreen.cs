@@ -1,7 +1,7 @@
+using Com.Shelinc.FullscreenCanvasController;
+using Com.Shelinc.SceneTransitionEffects;
 using Cysharp.Threading.Tasks;
 using GameComponentAttributes.Attributes;
-using GameJamEntry.MainMenu.SceneLoading;
-using GameJamEntry.MainMenu.ScreenControl;
 using GameJamEntry.Utils;
 #if UNITY_EDITOR
 using UnityEditor;
