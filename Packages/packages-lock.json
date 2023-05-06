@@ -15,20 +15,18 @@
       "hash": "8a8fa5a9659a6d63f196391c71e06c4286c8acd7"
     },
     "com.ultrashel.asynctimer": {
-      "version": "https://github.com/shelhelix/AsyncTimer.git",
+      "version": "file:com.shelinc.asynctimer",
       "depth": 0,
-      "source": "git",
+      "source": "embedded",
       "dependencies": {
         "com.cysharp.unitask": "2.3.1"
-      },
-      "hash": "2a59bf520c65b9ddcd4861eebdbcf1e49f75de8b"
+      }
     },
     "com.ultrashel.gamecomponentattributes": {
-      "version": "https://github.com/shelhelix/GameComponentAttributes.git",
+      "version": "file:com.shelinc.gamecomponentattributes",
       "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "e43724efe7f36c56feedda3072f87b446461e8c8"
+      "source": "embedded",
+      "dependencies": {}
     },
     "com.unity.2d.animation": {
       "version": "7.0.9",
