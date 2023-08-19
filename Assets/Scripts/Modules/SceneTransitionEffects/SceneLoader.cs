@@ -4,6 +4,9 @@ using UnityEngine.SceneManagement;
 
 namespace Com.Shelinc.SceneTransitionEffects {
 	public class SceneLoader {
+		public const string MainMenuSceneName = "MainMenu";
+		public const string GameplaySceneName = "Gameplay";
+		
 		readonly ISceneTransition _transition;
 
 		public SceneLoader(ISceneTransition transition) => _transition = transition;

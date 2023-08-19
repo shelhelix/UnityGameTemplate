@@ -11,7 +11,7 @@ namespace GameJamEntry.Gameplay.UI {
 		
 		[Inject]
 		public void Init(SceneLoader sceneLoader) {
-			Button.onClick.AddListener(() => sceneLoader.LoadScene("MainMenu").Forget());
+			Button.onClick.AddListener(() => sceneLoader.LoadScene(SceneLoader.MainMenuSceneName).Forget());
 		}
 	}
 }
