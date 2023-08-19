@@ -6,23 +6,23 @@ using UnityEngine.Audio;
 using VContainer;
 
 namespace GameJamEntry.MainMenu {
-	public class SoundHelper : MonoBehaviour, IDisposable {
+	public class SoundSettingsManager : MonoBehaviour, IDisposable {
 		[NotNullReference] [SerializeField] AudioMixer Mixer;
 
-		SystemSettingsController _systemSettingsController;
+		SoundSettingsController _soundSettingsController;
 		
 		[Inject]
-		public void Init(SystemSettingsController settingsController) {
-			_systemSettingsController                     =  settingsController;
-			_systemSettingsController.OnSoundParamChanged += OnSoundParamChanged;
+		public void Init(SoundSettingsController settingsController) {
+			_soundSettingsController                     =  settingsController;
+			_soundSettingsController.OnSoundParamChanged += OnSoundParamChanged;
 			UpdateValues();
 		}
 
 		public void Dispose() {
-			if ( _systemSettingsController == null ) {
+			if ( _soundSettingsController == null ) {
 				return;
 			}
-			_systemSettingsController.OnSoundParamChanged -= OnSoundParamChanged;
+			_soundSettingsController.OnSoundParamChanged -= OnSoundParamChanged;
 		}
 		
 		void OnSoundParamChanged((MixerParamName name, float value) paramChanged) {
@@ -31,7 +31,7 @@ namespace GameJamEntry.MainMenu {
 		
 		void UpdateValues() {
 			foreach ( MixerParamName mixerParam in Enum.GetValues(typeof(MixerParamName)) ) {
-				var normalizedVolume = _systemSettingsController.GetNormalizedVolume(mixerParam);
+				var normalizedVolume = _soundSettingsController.GetNormalizedVolume(mixerParam);
 				var volume           = GetAbsoluteVolume(normalizedVolume);
 				Mixer.SetFloat(mixerParam.ToString(), volume);
 			}

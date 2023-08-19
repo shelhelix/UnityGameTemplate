@@ -22,7 +22,7 @@ namespace Com.Shelinc.FullscreenCanvasController {
 		
 		public void HideImmediately() {
 			CanvasGroup.blocksRaycasts = false;
-			CanvasGroup.alpha = 0;
+			CanvasGroup.alpha          = 0;
 		}
 	}
 }

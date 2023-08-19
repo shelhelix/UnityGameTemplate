@@ -7,10 +7,10 @@ namespace GameJamEntry.MainMenu.UI.Settings {
 	public class SoundSettingsBlock : MonoBehaviour {
 		[NotNullReference] [SerializeField] Slider Slider;
 
-		SystemSettingsController _controller;
+		SoundSettingsController _controller;
 		MixerParamName           _mixerParamName;
 		
-		public void Init(SystemSettingsController settingsController, MixerParamName paramName) {
+		public void Init(SoundSettingsController settingsController, MixerParamName paramName) {
 			_mixerParamName = paramName;
 			_controller     = settingsController;
 			Slider.onValueChanged.RemoveAllListeners();

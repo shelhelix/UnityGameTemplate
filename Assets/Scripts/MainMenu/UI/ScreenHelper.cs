@@ -6,12 +6,12 @@ using GameJamEntry.MainMenu.UI.Settings;
 namespace GameJamEntry.MainMenu.UI {
 	public class ScreenHelper {
 		readonly ScreenManager            _screenManager;
-		readonly SystemSettingsController _systemSettingsController;
+		readonly SoundSettingsController _soundSettingsController;
 		readonly SceneLoader              _sceneLoader;
 
-		public ScreenHelper(ScreenManager screenManager, SystemSettingsController settingsController, SceneLoader sceneLoader) {
+		public ScreenHelper(ScreenManager screenManager, SoundSettingsController settingsController, SceneLoader sceneLoader) {
 			_screenManager            = screenManager;
-			_systemSettingsController = settingsController;
+			_soundSettingsController = settingsController;
 			_sceneLoader              = sceneLoader;
 			screenManager.Init();
 		}
@@ -21,7 +21,7 @@ namespace GameJamEntry.MainMenu.UI {
 		}
 
 		public void ShowSettingsScreen() {
-			_screenManager.ShowScreen<SettingsScreen>(x => x.Init(this, _systemSettingsController)).Forget();
+			_screenManager.ShowScreen<SettingsScreen>(x => x.Init(this, _soundSettingsController)).Forget();
 		}
 	}
 }

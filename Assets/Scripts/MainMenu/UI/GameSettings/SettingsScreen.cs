@@ -12,7 +12,7 @@ namespace GameJamEntry.MainMenu.UI.Settings {
 		[NotNullReference] [SerializeField] SoundSettingsBlock MusicSettingsBlocks;
 		[NotNullReference] [SerializeField] SoundSettingsBlock SfxSettingsBlocks;
 		
-		public void Init(ScreenHelper helper, SystemSettingsController settingsController) {
+		public void Init(ScreenHelper helper, SoundSettingsController settingsController) {
 			ReturnButton.RemoveAllAndAddListener(helper.ShowMainMenuScreen);
 			MasterSettingsBlocks.Init(settingsController, MixerParamName.MasterVolume);
 			MusicSettingsBlocks.Init(settingsController, MixerParamName.MusicVolume);

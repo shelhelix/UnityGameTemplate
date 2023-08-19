@@ -4,15 +4,15 @@ using UnityEngine;
 
 namespace GameJamEntry.General {
 	[Serializable]
-	public class SystemSettingsState {
+	public class SoundSettingsControllerState {
 		public List<MixerEntry> Entries = new();
 
-		public SystemSettingsState() {
+		public SoundSettingsControllerState() {
 			foreach ( MixerParamName name in Enum.GetValues(typeof(MixerParamName)) ) {
 				GetOrCreateEntry(name).Volume = PlayerPrefs.GetFloat(name.ToString(), 1);
 			}
 		}
-		
+
 		public void Save() {
 			foreach ( var entry in Entries ) {
 				PlayerPrefs.SetFloat(entry.MixerParamName.ToString(), entry.Volume);
@@ -32,11 +32,11 @@ namespace GameJamEntry.General {
 
 	public class MixerEntry {
 		public MixerParamName MixerParamName;
-		public float     Volume;
+		public float          Volume;
 
 		public MixerEntry(MixerParamName name, float volume) {
 			MixerParamName = name;
-			Volume    = volume;
+			Volume         = volume;
 		}
 	}
 }
