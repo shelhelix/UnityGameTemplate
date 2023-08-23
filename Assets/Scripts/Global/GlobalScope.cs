@@ -1,4 +1,6 @@
 ﻿using GameJamEntry.General;
+using GameJamEntry.Global;
+using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 
@@ -9,6 +11,14 @@ namespace GameJamEntry {
 			var globalGameState = new GlobalGameState();
 			builder.RegisterInstance(globalGameState);
 			builder.RegisterInstance(globalGameState.SoundSettingsController);
+			builder.RegisterInstance(CreateGameWideObjects());
+			builder.
+		}
+
+		GameWideObjects CreateGameWideObjects() {
+			var instance = Instantiate(Resources.Load<GameWideObjects>("GameWideObjects"));
+			DontDestroyOnLoad(instance.gameObject);
+			return instance;
 		}
 	}
 }
