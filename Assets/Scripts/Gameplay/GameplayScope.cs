@@ -13,7 +13,7 @@ namespace GameJamEntry.Gameplay {
 		
 		protected override void Configure(IContainerBuilder builder) {
 			base.Configure(builder);
-			// TODO: register your classes here
+			// TODO: register your gameplay classes here
 			builder.RegisterInstance(ScreenManager);
 			builder.RegisterInstance<ISceneTransition>(FadeSceneTransition.Instance);
 			builder.Register<SceneLoader>(Lifetime.Scoped);

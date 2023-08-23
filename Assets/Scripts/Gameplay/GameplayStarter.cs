@@ -9,6 +9,7 @@ namespace GameJamEntry.Gameplay {
 		public GameplayStarter(ScreenManager screenManager) => _screenManager = screenManager;
 
 		public void Start() {
+			_screenManager.Init();
 			_screenManager.ShowScreen<GameplayScreen>().Forget();
 		}
 	}
