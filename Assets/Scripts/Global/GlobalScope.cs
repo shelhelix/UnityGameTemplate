@@ -11,12 +11,12 @@ namespace GameJamEntry {
 			var globalGameState = new GlobalGameState();
 			builder.RegisterInstance(globalGameState);
 			builder.RegisterInstance(globalGameState.SoundSettingsController);
-			builder.RegisterInstance(CreateGameWideObjects());
-			builder.
+			builder.RegisterInstance(CreateGlobalObjects());
+			builder.Register<AudioPlayer>(Lifetime.Singleton);
 		}
 
-		GameWideObjects CreateGameWideObjects() {
-			var instance = Instantiate(Resources.Load<GameWideObjects>("GameWideObjects"));
+		AudioPlayerObjects CreateGlobalObjects() {
+			var instance = Instantiate(Resources.Load<AudioPlayerObjects>("GameWideObjects"));
 			DontDestroyOnLoad(instance.gameObject);
 			return instance;
 		}
