@@ -6,7 +6,7 @@ using UnityEngine.Audio;
 using VContainer;
 
 namespace GameJamEntry.MainMenu {
-	public class SoundSettingsManager : MonoBehaviour, IDisposable {
+	public class SoundSettingsWatcher : MonoBehaviour, IDisposable {
 		[NotNullReference] [SerializeField] AudioMixer Mixer;
 
 		SoundSettingsController _soundSettingsController;
@@ -39,7 +39,7 @@ namespace GameJamEntry.MainMenu {
 
 		float GetAbsoluteVolume(float normalizedVolume) {
 			var minVolume = -80;
-			var maxVolume = 20;
+			var maxVolume = 0;
 			return normalizedVolume * (maxVolume - minVolume) + minVolume;
 		}
 	}
