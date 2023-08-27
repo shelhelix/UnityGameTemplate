@@ -37,10 +37,6 @@ namespace GameJamEntry.MainMenu {
 			}
 		}
 
-		float GetAbsoluteVolume(float normalizedVolume) {
-			var minVolume = -80;
-			var maxVolume = 0;
-			return Mathf.Log10(normalizedVolume) * 20;
-		}
+		float GetAbsoluteVolume(float normalizedVolume) => Mathf.Log10(normalizedVolume) * 20;
 	}
 }
