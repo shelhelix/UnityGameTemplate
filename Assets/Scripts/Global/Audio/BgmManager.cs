@@ -24,16 +24,7 @@ namespace GameJamEntry.Global {
 			PlayCurrentClip();
 		}
 
-		void PlayCurrentClip() {
-			if ( !IsValidIndex(_currentClipIndex) ) {
-				Debug.LogError("Can't play current clip cause index is out of range");
-				return;
-			}	
-			var clip = _activeClips[_currentClipIndex];
-			_player.PlayBgm(clip, false);
-		}
-
-		void OnBgmEnded() {
+		public void PlayNextSong() {
 			if ( !IsValidIndex(_currentClipIndex) ) {
 				Debug.LogError("Can't start next BGM. Index is invalid");
 				return;
@@ -44,6 +35,19 @@ namespace GameJamEntry.Global {
 			}
 			_currentClipIndex = (_currentClipIndex + 1) % _activeClips.Count;
 			PlayCurrentClip();
+		}
+
+		void PlayCurrentClip() {
+			if ( !IsValidIndex(_currentClipIndex) ) {
+				Debug.LogError("Can't play current clip cause index is out of range");
+				return;
+			}	
+			var clip = _activeClips[_currentClipIndex];
+			_player.PlayBgm(clip, false);
+		}
+
+		void OnBgmEnded() {
+			PlayNextSong();
 		}
 		
 		bool IsValidIndex(int index) => (index >= 0) && (index < _activeClips.Count);
