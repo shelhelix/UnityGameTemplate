@@ -17,9 +17,9 @@ namespace  GameJamEntry.MainMenu.UI {
 		[NotNullReference] [SerializeField] ButtonWrapper JamLinkButton;
 		[NotNullReference] [SerializeField] ButtonWrapper ExitButton;
 
-		public void Init(ScreenHelper screenHelper, SceneLoader sceneLoader) {
+		public void Init(MainMenuScreenHelper mainMenuScreenHelper, SceneLoader sceneLoader) {
 			PlayButton.RemoveAllAndAddListener(() => sceneLoader.LoadScene(SceneLoader.GameplaySceneName).Forget());
-			SettingsButton.RemoveAllAndAddListener(screenHelper.ShowSettingsScreen);
+			SettingsButton.RemoveAllAndAddListener(mainMenuScreenHelper.ShowSettingsScreen);
 			JamLinkButton.RemoveAllAndAddListener(() => Application.OpenURL(JamLink));
 			ExitButton.RemoveAllAndAddListener(Exit);
 		}

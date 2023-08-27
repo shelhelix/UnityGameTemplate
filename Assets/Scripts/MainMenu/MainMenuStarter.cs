@@ -1,16 +1,18 @@
-﻿using GameJamEntry.MainMenu.UI;
+﻿using System.Collections.Generic;
+using GameComponentAttributes.Attributes;
+using GameJamEntry.Global;
+using GameJamEntry.MainMenu.UI;
+using UnityEngine;
 using VContainer;
-using VContainer.Unity;
 
-namespace GameJamEntry.MainMenu {
-	public class MainMenuStarter : IStartable {
-		ScreenHelper _screenHelper;
-		
+namespace GameJamEntry.Gameplay {
+	public class MainMenuStarter : MonoBehaviour {
+		[NotNullReference] [SerializeField] List<AudioClip> Bgms;
+
 		[Inject]
-		public MainMenuStarter(ScreenHelper screenHelper) => _screenHelper = screenHelper;
-
-		public void Start() {
-			_screenHelper.ShowMainMenuScreen();
+		public void Init(MainMenuScreenHelper mainMenuScreenManager, BgmManager bgmManager) {
+			mainMenuScreenManager.ShowMainMenuScreen();
+			bgmManager.PlayBgms(Bgms);
 		}
 	}
 }

@@ -17,8 +17,7 @@ namespace GameJamEntry.MainMenu {
 			builder.RegisterInstance(FadeSceneTransition.Instance).As<ISceneTransition>();
 			builder.Register<SceneLoader>(Lifetime.Scoped);
 			builder.RegisterInstance(ScreenManager);
-			builder.Register<ScreenHelper>(Lifetime.Scoped);
-			builder.RegisterEntryPoint<MainMenuStarter>();
+			builder.Register<MainMenuScreenHelper>(Lifetime.Scoped);
 		}
 	}
 }

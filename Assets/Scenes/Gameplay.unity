@@ -951,6 +951,7 @@ GameObject:
   - component: {fileID: 1602011238}
   - component: {fileID: 1602011237}
   - component: {fileID: 1602011236}
+  - component: {fileID: 1602011240}
   m_Layer: 5
   m_Name: ReturnToMainMenuButton
   m_TagString: Untagged
@@ -990,7 +991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 339a33e6d61a4a2fae91d3fef9afc5ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Button: {fileID: 1602011237}
+  Button: {fileID: 1602011240}
 --- !u!114 &1602011237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1073,6 +1074,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1602011234}
   m_CullTransparentMesh: 1
+--- !u!114 &1602011240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602011234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4bf1280a741492f9ab9bc20e1568f7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Button: {fileID: 1602011237}
+  ClickSound: {fileID: 8300000, guid: a2bea926ef5f66e4bb6ace29e2d3aaad, type: 3}
 --- !u!1 &1642169010
 GameObject:
   m_ObjectHideFlags: 0
@@ -1271,6 +1286,7 @@ GameObject:
   - component: {fileID: 1757527531}
   - component: {fileID: 1757527530}
   - component: {fileID: 1757527533}
+  - component: {fileID: 1757527534}
   m_Layer: 5
   m_Name: ReturnToMainMenuButton
   m_TagString: Untagged
@@ -1392,7 +1408,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 339a33e6d61a4a2fae91d3fef9afc5ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Button: {fileID: 1757527534}
+--- !u!114 &1757527534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757527528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4bf1280a741492f9ab9bc20e1568f7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   Button: {fileID: 1757527530}
+  ClickSound: {fileID: 8300000, guid: a2bea926ef5f66e4bb6ace29e2d3aaad, type: 3}
 --- !u!1 &1782843872
 GameObject:
   m_ObjectHideFlags: 0

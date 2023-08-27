@@ -4,12 +4,12 @@ using GameJamEntry.General;
 using GameJamEntry.MainMenu.UI.Settings;
 
 namespace GameJamEntry.MainMenu.UI {
-	public class ScreenHelper {
+	public class MainMenuScreenHelper {
 		readonly ScreenManager            _screenManager;
 		readonly SoundSettingsController _soundSettingsController;
 		readonly SceneLoader              _sceneLoader;
 
-		public ScreenHelper(ScreenManager screenManager, SoundSettingsController settingsController, SceneLoader sceneLoader) {
+		public MainMenuScreenHelper(ScreenManager screenManager, SoundSettingsController settingsController, SceneLoader sceneLoader) {
 			_screenManager            = screenManager;
 			_soundSettingsController = settingsController;
 			_sceneLoader              = sceneLoader;
