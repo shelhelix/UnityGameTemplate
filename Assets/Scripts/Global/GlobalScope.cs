@@ -13,6 +13,7 @@ namespace GameJamEntry {
 			builder.RegisterInstance(globalGameState.SoundSettingsController);
 			builder.RegisterInstance(CreateGlobalObjects());
 			builder.Register<AudioPlayer>(Lifetime.Singleton);
+			builder.Register<BgmManager>(Lifetime.Singleton);
 		}
 
 		AudioPlayerObjects CreateGlobalObjects() {

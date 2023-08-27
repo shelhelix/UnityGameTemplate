@@ -1,16 +1,20 @@
-﻿using Com.Shelinc.FullscreenCanvasController;
+﻿using System.Collections.Generic;
+using Com.Shelinc.FullscreenCanvasController;
+using GameComponentAttributes.Attributes;
 using GameJamEntry.Gameplay.UI;
-using VContainer.Unity;
+using GameJamEntry.Global;
+using UnityEngine;
+using VContainer;
 
 namespace GameJamEntry.Gameplay {
-	public class GameplayStarter : IStartable {
-		ScreenManager _screenManager;
-		
-		public GameplayStarter(ScreenManager screenManager) => _screenManager = screenManager;
+	public class GameplayStarter : MonoBehaviour {
+		[NotNullReference] [SerializeField] List<AudioClip> Bgms;
 
-		public void Start() {
-			_screenManager.Init();
-			_screenManager.ShowScreen<GameplayScreen>().Forget();
+		[Inject]
+		public void Init(ScreenManager screenManager, BgmManager bgmManager) {
+			screenManager.Init();
+			screenManager.ShowScreen<GameplayScreen>().Forget();
+			bgmManager.PlayBgms(Bgms);
 		}
 	}
 }
