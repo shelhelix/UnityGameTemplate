@@ -1,6 +1,5 @@
 ﻿using System;
 using UnityEngine;
-using VContainer;
 
 namespace GameJamEntry.Global {
 	public class AudioPlayer {
@@ -11,8 +10,7 @@ namespace GameJamEntry.Global {
 		
 		AudioSourceWatcher _bgmWatcher;
 		
-		[Inject]
-		public void Init(AudioPlayerObjects audioPlayerObjects) {
+		public AudioPlayer(AudioPlayerObjects audioPlayerObjects) {
 			_sfxSource                    =  audioPlayerObjects.SfxPlayer;
 			_bgmSource                    =  audioPlayerObjects.BgmPlayer;
 			_bgmWatcher                   =  new AudioSourceWatcher(_bgmSource);

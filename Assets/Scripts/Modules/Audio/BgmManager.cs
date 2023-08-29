@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using VContainer;
 
 namespace GameJamEntry.Global {
 	public class BgmManager {
@@ -11,7 +10,6 @@ namespace GameJamEntry.Global {
 		int  _currentClipIndex;
 		bool _loopClips;
 
-		[Inject]
 		public BgmManager(AudioPlayer player) {
 			_player              =  player;
 			_player.BgmClipEnded += OnBgmEnded;

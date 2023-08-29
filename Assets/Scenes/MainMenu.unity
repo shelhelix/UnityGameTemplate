@@ -324,7 +324,6 @@ MonoBehaviour:
   autoInjectGameObjects:
   - {fileID: 1646781099}
   - {fileID: 1096304805}
-  - {fileID: 142312809}
   ScreenManager: {fileID: 1096304810}
 --- !u!1 &245400325
 GameObject:

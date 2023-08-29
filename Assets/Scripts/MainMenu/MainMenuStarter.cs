@@ -6,6 +6,7 @@ using UnityEngine;
 using VContainer;
 
 namespace GameJamEntry.Gameplay {
+
 	public class MainMenuStarter : MonoBehaviour {
 		[NotNullReference] [SerializeField] List<AudioClip> Bgms;
 
