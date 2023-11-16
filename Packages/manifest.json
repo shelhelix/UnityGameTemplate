@@ -2,6 +2,7 @@
   "dependencies": {
     "com.cysharp.unitask": "2.3.3",
     "com.dbrizov.naughtyattributes": "https://github.com/dbrizov/NaughtyAttributes.git#upm",
+    "com.sag.main-scene-auto-loading": "https://github.com/STARasGAMES/unity-main-scene-auto-loading.git#upm",
     "com.ultrashel.asynctimer": "https://github.com/shelhelix/AsyncTimer.git",
     "com.ultrashel.gamecomponentattributes": "https://github.com/shelhelix/GameComponentAttributes.git",
     "com.unity.ai.navigation": "1.1.4",
