@@ -13,21 +13,22 @@ MonoBehaviour:
   m_Name: MainSceneAutoLoadingSettings
   m_EditorClassIdentifier: 
   Enabled: 1
+  KeepActiveSceneAsActive: 1
   _mainSceneProvider:
-    rid: 5893435631772368899
+    rid: 7408007066071073270
   _mainSceneLoadedHandler:
-    rid: 5893435637213167687
+    rid: 7408007066071073271
   _playmodeExitedHandler:
-    rid: 5893435631772368901
+    rid: 7408007066071073272
   references:
     version: 2
     RefIds:
-    - rid: 5893435631772368899
-      type: {class: FirstSceneInBuildSettings, ns: SaG.MainSceneAutoLoading.MainSceneProviders, asm: SaG.MainSceneAutoLoading.Editor}
+    - rid: 7408007066071073270
+      type: {class: FirstSceneInBuildSettings, ns: Ems.MainSceneAutoLoading.MainSceneProviders, asm: Ems.MainSceneAutoLoading.Editor}
       data: 
-    - rid: 5893435631772368901
-      type: {class: RestoreSceneManagerSetup, ns: SaG.MainSceneAutoLoading.PlaymodeExitedHandlers, asm: SaG.MainSceneAutoLoading.Editor}
+    - rid: 7408007066071073271
+      type: {class: DelegateToInSceneImplementations, ns: Ems.MainSceneAutoLoading.MainSceneLoadedHandlers, asm: Ems.MainSceneAutoLoading.Editor}
       data: 
-    - rid: 5893435637213167687
-      type: {class: DelegateToInSceneImplementations, ns: SaG.MainSceneAutoLoading.MainSceneLoadedHandlers, asm: SaG.MainSceneAutoLoading.Editor}
+    - rid: 7408007066071073272
+      type: {class: RestoreSceneManagerSetup, ns: Ems.MainSceneAutoLoading.PlaymodeExitedHandlers, asm: Ems.MainSceneAutoLoading.Editor}
       data: 
