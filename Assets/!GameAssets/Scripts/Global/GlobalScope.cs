@@ -9,18 +9,11 @@ namespace GameJamEntry {
 	public class GlobalScope : LifetimeScope {
 		protected override void Configure(IContainerBuilder builder) {
 			base.Configure(builder);
-			var globalGameState = new GlobalGameState();
-			builder.RegisterInstance(globalGameState);
-			builder.RegisterInstance(globalGameState.SoundSettingsController);
-			builder.RegisterInstance(CreateGlobalObjects());
+			var soundPrefab = Resources.Load<AudioElements>("AudioPlayer");
+			builder.RegisterComponentInNewPrefab(soundPrefab, Lifetime.Singleton).DontDestroyOnLoad();
+			builder.Register<SoundSettingsController>(Lifetime.Singleton);
 			builder.Register<AudioPlayer>(Lifetime.Singleton);
 			builder.Register<BgmManager>(Lifetime.Singleton);
-		}
-
-		AudioPlayerObjects CreateGlobalObjects() {
-			var instance = Instantiate(Resources.Load<AudioPlayerObjects>("GameWideObjects"));
-			DontDestroyOnLoad(instance.gameObject);
-			return instance;
 		}
 	}
 }

@@ -304,3 +304,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BgmPlayer: {fileID: 5349439326915055374}
   SfxPlayer: {fileID: 4927044486003414968}
+  Mixer: {fileID: 24100000, guid: 01861c57323533b4fadfd86acbf13857, type: 2}

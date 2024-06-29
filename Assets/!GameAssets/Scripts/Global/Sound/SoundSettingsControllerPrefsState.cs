@@ -4,10 +4,10 @@ using UnityEngine;
 
 namespace GameJamEntry.General {
 	[Serializable]
-	public class SoundSettingsControllerState {
+	public class SoundSettingsControllerPrefsState {
 		public List<MixerEntry> Entries = new();
 
-		public SoundSettingsControllerState() {
+		public SoundSettingsControllerPrefsState() {
 			foreach ( MixerParamName name in Enum.GetValues(typeof(MixerParamName)) ) {
 				GetOrCreateEntry(name).Volume = PlayerPrefs.GetFloat(name.ToString(), 1);
 			}

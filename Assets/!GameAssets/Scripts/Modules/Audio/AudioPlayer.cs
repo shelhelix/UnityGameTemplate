@@ -10,9 +10,9 @@ namespace GameJamEntry.Global {
 		
 		AudioSourceWatcher _bgmWatcher;
 		
-		public AudioPlayer(AudioPlayerObjects audioPlayerObjects) {
-			_sfxSource                    =  audioPlayerObjects.SfxPlayer;
-			_bgmSource                    =  audioPlayerObjects.BgmPlayer;
+		public AudioPlayer(AudioElements audioElements) {
+			_sfxSource                    =  audioElements.SfxPlayer;
+			_bgmSource                    =  audioElements.BgmPlayer;
 			_bgmWatcher                   =  new AudioSourceWatcher(_bgmSource);
 			_bgmWatcher.IsFinishedPlaying += OnBgmFinished;
 		}
