@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: 6594275545159879654}
   - component: {fileID: 5382889606195820354}
   m_Layer: 0
-  m_Name: GameWideObjects
+  m_Name: AudioPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
