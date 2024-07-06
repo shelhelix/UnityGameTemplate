@@ -1,6 +1,7 @@
-﻿using GameJamEntry.Scripts.Global.Sound;
+﻿using Com.Shelinc.SceneTransitionEffects.Modules.SceneTransitionEffects.Transitions.Implementations;
+using GameJamEntry.Scripts.Global.Sound;
+using GameJamEntry.Scripts.Utils;
 using Modules.Audio;
-using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 
@@ -9,8 +10,8 @@ namespace GameJamEntry.Scripts.Global {
 	public class GlobalScope : LifetimeScope {
 		protected override void Configure(IContainerBuilder builder) {
 			base.Configure(builder);
-			var soundPrefab = Resources.Load<AudioElements>("AudioPlayer");
-			builder.RegisterComponentInNewPrefab(soundPrefab, Lifetime.Singleton).DontDestroyOnLoad();
+			builder.RegisterComponentFromResources<AudioElements>("AudioPlayer", Lifetime.Singleton).DontDestroyOnLoad();
+			builder.RegisterComponentFromResources<FakeSceneTransition>(FakeSceneTransition.ResourcePath, Lifetime.Singleton).DontDestroyOnLoad();
 			builder.Register<SoundSettingsController>(Lifetime.Singleton);
 			builder.Register<AudioPlayer>(Lifetime.Singleton);
 			builder.Register<BgmManager>(Lifetime.Singleton);
