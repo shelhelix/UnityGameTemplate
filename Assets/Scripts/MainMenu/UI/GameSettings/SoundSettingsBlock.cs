@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace Game.MainMenu.UI.GameSettings {
 	public class SoundSettingsBlock : MonoBehaviour {
-		[NotNullReference] [SerializeField] Slider Slider;
+		[NotNullReference] public Slider Slider;
 
 		SoundSettingsController _controller;
 		MixerParamName           _mixerParamName;

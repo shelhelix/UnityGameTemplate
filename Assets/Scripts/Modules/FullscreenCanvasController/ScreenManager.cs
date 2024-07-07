@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Modules.FullscreenCanvasController {
 	public class ScreenManager : MonoBehaviour {
-		[NotNullReference] [SerializeField] List<BaseScreen> Screens;
+		[NotNullReference] public List<BaseScreen> Screens;
 
 		bool _inTransit;
 

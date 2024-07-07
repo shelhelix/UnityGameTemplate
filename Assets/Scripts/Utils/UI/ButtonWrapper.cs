@@ -10,7 +10,7 @@ namespace Game.Utils.UI {
 	public sealed class ButtonWrapper : MonoBehaviour {
 		[NotNullReference] public Button    Button;
 		
-		[NotNullReference] public AudioClip ClickSound;
+		public AudioClip ClickSound;
 
 		AudioPlayer _player;
 
@@ -37,7 +37,6 @@ namespace Game.Utils.UI {
 
 		void PlaySound() {
 			if ( !ClickSound ) {
-				Debug.LogWarning("ButtonWithSfx: Click sound is not set");
 				return;
 			}
 			_player.PlaySfx(ClickSound);

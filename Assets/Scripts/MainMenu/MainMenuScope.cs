@@ -2,13 +2,12 @@
 using GameComponentAttributes.Attributes;
 using Modules.FullscreenCanvasController;
 using Modules.SceneTransitionEffects;
-using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 
 namespace Game.MainMenu {
 	public class MainMenuScope : LifetimeScope {
-		[NotNullReference] [SerializeField] ScreenManager ScreenManager;
+		[NotNullReference] public ScreenManager ScreenManager;
 		
 		protected override void Configure(IContainerBuilder builder) {
 			base.Configure(builder);

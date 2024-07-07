@@ -6,9 +6,8 @@ using UnityEngine;
 using VContainer;
 
 namespace Game.MainMenu {
-
 	public class MainMenuStarter : MonoBehaviour {
-		[NotNullReference] [SerializeField] List<AudioClip> Bgms;
+		[NotNullReference] public List<AudioClip> Bgms;
 
 		[Inject]
 		public void Init(MainMenuScreenHelper mainMenuScreenManager, BgmManager bgmManager) {

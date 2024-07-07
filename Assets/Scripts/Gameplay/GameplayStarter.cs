@@ -6,7 +6,7 @@ using VContainer;
 
 namespace Game.Gameplay {
 	public class GameplayStarter : MonoBehaviour {
-		[NotNullReference] [SerializeField] List<AudioClip> Bgms;
+		[NotNullReference] public List<AudioClip> Bgms;
 
 		[Inject]
 		public void Init(BgmManager bgmManager) {

@@ -4,7 +4,7 @@ using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 namespace Modules.Audio {
-	public class AudioSourceWatcher {
+	class AudioSourceWatcher {
 		AudioSource _source;
 
 		CancellationTokenSource _cancellationTokenSource;

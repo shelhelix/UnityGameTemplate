@@ -2,12 +2,14 @@
 using VContainer;
 using VContainer.Unity;
 
-namespace Game.Utils
-{
+namespace Game.Utils {
     public static class ScopeUtils {
         public static ComponentRegistrationBuilder RegisterComponentFromResources<T>(this IContainerBuilder builder, string path, Lifetime lifetime) where T : Component {
-            var prefab = Resources.Load<T>(path);
-            return builder.RegisterComponentInNewPrefab(prefab, lifetime);
+            var component = Resources.Load<T>(path);
+            if ( !component ) {
+                Debug.LogError($"Can't get component {typeof(T)} from path {path}. Add to VContainer will fail");
+            }
+            return builder.RegisterComponentInNewPrefab(component, lifetime);
         } 
         
     }

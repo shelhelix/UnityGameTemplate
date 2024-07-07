@@ -2,14 +2,13 @@
 using Game.Utils.UI;
 using GameComponentAttributes.Attributes;
 using Modules.FullscreenCanvasController;
-using UnityEngine;
 
 namespace Game.MainMenu.UI.GameSettings {
 	public class SettingsScreen : BaseScreen {
-		[NotNullReference] [SerializeField] ButtonWrapper      ReturnButton;
-		[NotNullReference] [SerializeField] SoundSettingsBlock MasterSettingsBlocks;
-		[NotNullReference] [SerializeField] SoundSettingsBlock MusicSettingsBlocks;
-		[NotNullReference] [SerializeField] SoundSettingsBlock SfxSettingsBlocks;
+		[NotNullReference] public ButtonWrapper      ReturnButton;
+		[NotNullReference] public SoundSettingsBlock MasterSettingsBlocks;
+		[NotNullReference] public SoundSettingsBlock MusicSettingsBlocks;
+		[NotNullReference] public SoundSettingsBlock SfxSettingsBlocks;
 		
 		public void Init(MainMenuScreenHelper helper, SoundSettingsController settingsController) {
 			ReturnButton.RemoveAllAndAddListener(helper.ShowMainMenuScreen);

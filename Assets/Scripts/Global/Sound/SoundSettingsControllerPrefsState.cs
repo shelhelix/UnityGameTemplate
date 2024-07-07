@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace Game.Global.Sound {
-	[Serializable]
 	public class SoundSettingsControllerPrefsState {
 		public List<MixerEntry> Entries = new();
 
@@ -27,16 +26,6 @@ namespace Game.Global.Sound {
 			res = new MixerEntry(mixerParamName, 1);
 			Entries.Add(res);
 			return res;
-		}
-	}
-
-	public class MixerEntry {
-		public MixerParamName MixerParamName;
-		public float          Volume;
-
-		public MixerEntry(MixerParamName name, float volume) {
-			MixerParamName = name;
-			Volume         = volume;
 		}
 	}
 }

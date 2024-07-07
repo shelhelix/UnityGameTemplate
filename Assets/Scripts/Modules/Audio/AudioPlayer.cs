@@ -5,10 +5,10 @@ namespace Modules.Audio {
 	public class AudioPlayer {
 		AudioSource _sfxSource;
 		AudioSource _bgmSource;
-
-		public event Action BgmClipEnded; 
 		
 		AudioSourceWatcher _bgmWatcher;
+
+		public event Action BgmClipEnded; 
 		
 		public AudioPlayer(AudioElements audioElements) {
 			_sfxSource                    =  audioElements.SfxPlayer;
