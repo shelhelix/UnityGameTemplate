@@ -4,7 +4,7 @@ using Modules.Audio;
 using UnityEngine;
 using UnityEngine.Audio;
 
-namespace GameJamEntry.Scripts.Global.Sound {
+namespace Game.Global.Sound {
 	public class SoundSettingsController {
 		SoundSettingsControllerPrefsState _controllerPrefsState = new();
 

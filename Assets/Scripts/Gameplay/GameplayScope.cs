@@ -1,8 +1,8 @@
-﻿using Com.Shelinc.SceneTransitionEffects.Modules.SceneTransitionEffects;
+﻿using Modules.SceneTransitionEffects;
 using VContainer;
 using VContainer.Unity;
 
-namespace GameJamEntry.Scripts.Gameplay {
+namespace Game.Gameplay {
 	public class GameplayScope : LifetimeScope {
 		
 		protected override void Configure(IContainerBuilder builder) {

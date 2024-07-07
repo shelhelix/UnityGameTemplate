@@ -1,8 +1,8 @@
-﻿using Com.Shelinc.SceneTransitionEffects.Modules.SceneTransitionEffects.Transitions;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
+using Modules.SceneTransitionEffects.Transitions;
 using UnityEngine.SceneManagement;
 
-namespace Com.Shelinc.SceneTransitionEffects.Modules.SceneTransitionEffects {
+namespace Modules.SceneTransitionEffects {
 	public class SceneLoader {
 		public const string MainMenuSceneName = "MainMenu";
 		public const string GameplaySceneName = "Gameplay";

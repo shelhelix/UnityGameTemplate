@@ -1,9 +1,9 @@
-﻿using GameComponentAttributes.Attributes;
-using GameJamEntry.Scripts.Global.Sound;
+﻿using Game.Global.Sound;
+using GameComponentAttributes.Attributes;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace GameJamEntry.Scripts.MainMenu.UI.GameSettings {
+namespace Game.MainMenu.UI.GameSettings {
 	public class SoundSettingsBlock : MonoBehaviour {
 		[NotNullReference] [SerializeField] Slider Slider;
 

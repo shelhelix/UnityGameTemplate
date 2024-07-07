@@ -1,10 +1,10 @@
-﻿using Com.Shelinc.FullscreenCanvasController.Modules.FullscreenCanvasController;
+﻿using Game.Global.Sound;
+using Game.Utils.UI;
 using GameComponentAttributes.Attributes;
-using GameJamEntry.Scripts.Global.Sound;
-using GameJamEntry.Scripts.Utils.UI;
+using Modules.FullscreenCanvasController;
 using UnityEngine;
 
-namespace GameJamEntry.Scripts.MainMenu.UI.GameSettings {
+namespace Game.MainMenu.UI.GameSettings {
 	public class SettingsScreen : BaseScreen {
 		[NotNullReference] [SerializeField] ButtonWrapper      ReturnButton;
 		[NotNullReference] [SerializeField] SoundSettingsBlock MasterSettingsBlocks;

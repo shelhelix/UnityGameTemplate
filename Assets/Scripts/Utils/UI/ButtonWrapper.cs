@@ -5,7 +5,7 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 using VContainer;
 
-namespace GameJamEntry.Scripts.Utils.UI {
+namespace Game.Utils.UI {
 	[RequireComponent(typeof(Button))]
 	public sealed class ButtonWrapper : MonoBehaviour {
 		[NotNullReference] public Button    Button;

@@ -1,11 +1,12 @@
 ﻿using Cysharp.Threading.Tasks;
+using UnityEngine;
 
-namespace Com.Shelinc.SceneTransitionEffects.Modules.SceneTransitionEffects.Transitions.Implementations  {
-	public class FakeSceneTransition : SceneTransitionSingleton<FakeSceneTransition> {
+namespace Modules.SceneTransitionEffects.Transitions.Implementations  {
+	public class FakeSceneTransition : MonoBehaviour, ISceneTransition  {
 		public const string ResourcePath = "SceneTransitions/FakeSceneTransition";
 		
-		public override UniTask HideScenes() => UniTask.CompletedTask;
+		public UniTask HideScenes() => UniTask.CompletedTask;
 
-		public override UniTask ShowScenes() => UniTask.CompletedTask;
+		public UniTask ShowScenes() => UniTask.CompletedTask;
 	}
 }

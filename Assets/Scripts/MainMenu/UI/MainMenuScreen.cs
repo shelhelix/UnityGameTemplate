@@ -1,14 +1,14 @@
-using Com.Shelinc.FullscreenCanvasController.Modules.FullscreenCanvasController;
-using Com.Shelinc.SceneTransitionEffects.Modules.SceneTransitionEffects;
 using Cysharp.Threading.Tasks;
+using Game.Utils.UI;
 using GameComponentAttributes.Attributes;
-using GameJamEntry.Scripts.Utils.UI;
+using Modules.FullscreenCanvasController;
+using Modules.SceneTransitionEffects;
 using UnityEditor;
 using UnityEngine;
 #if UNITY_EDITOR
 #endif
 
-namespace  GameJamEntry.Scripts.MainMenu.UI {
+namespace  Game.MainMenu.UI {
 	public class MainMenuScreen : BaseScreen {
 		const string JamLink = "add link to jam here";
 		

@@ -2,7 +2,7 @@
 using VContainer;
 using VContainer.Unity;
 
-namespace GameJamEntry.Scripts.Utils
+namespace Game.Utils
 {
     public static class ScopeUtils {
         public static ComponentRegistrationBuilder RegisterComponentFromResources<T>(this IContainerBuilder builder, string path, Lifetime lifetime) where T : Component {

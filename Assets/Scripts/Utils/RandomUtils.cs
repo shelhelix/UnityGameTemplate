@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 
-namespace GameJamEntry.Scripts.Utils {
+namespace Game.Utils {
 	public static class RandomUtils {
-		public static T GetRandomElementInList<T>(List<T> values) {
+		public static T GetRandomElementInList<T>(this List<T> values) {
 			if ( values.Count == 0 ) {
 				return default;
 			}

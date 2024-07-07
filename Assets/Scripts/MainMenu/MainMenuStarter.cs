@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
+using Game.MainMenu.UI;
 using GameComponentAttributes.Attributes;
-using GameJamEntry.Scripts.MainMenu.UI;
 using Modules.Audio;
 using UnityEngine;
 using VContainer;
 
-namespace GameJamEntry.Scripts.MainMenu {
+namespace Game.MainMenu {
 
 	public class MainMenuStarter : MonoBehaviour {
 		[NotNullReference] [SerializeField] List<AudioClip> Bgms;

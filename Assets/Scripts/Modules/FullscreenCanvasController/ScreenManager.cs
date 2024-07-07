@@ -4,7 +4,7 @@ using Cysharp.Threading.Tasks;
 using GameComponentAttributes.Attributes;
 using UnityEngine;
 
-namespace Com.Shelinc.FullscreenCanvasController.Modules.FullscreenCanvasController {
+namespace Modules.FullscreenCanvasController {
 	public class ScreenManager : MonoBehaviour {
 		[NotNullReference] [SerializeField] List<BaseScreen> Screens;
 

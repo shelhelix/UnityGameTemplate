@@ -1,9 +1,9 @@
-﻿using Com.Shelinc.FullscreenCanvasController.Modules.FullscreenCanvasController;
-using Com.Shelinc.SceneTransitionEffects.Modules.SceneTransitionEffects;
-using GameJamEntry.Scripts.Global.Sound;
-using GameJamEntry.Scripts.MainMenu.UI.GameSettings;
+﻿using Game.Global.Sound;
+using Game.MainMenu.UI.GameSettings;
+using Modules.FullscreenCanvasController;
+using Modules.SceneTransitionEffects;
 
-namespace GameJamEntry.Scripts.MainMenu.UI {
+namespace Game.MainMenu.UI {
 	public class MainMenuScreenHelper {
 		readonly ScreenManager            _screenManager;
 		readonly SoundSettingsController _soundSettingsController;

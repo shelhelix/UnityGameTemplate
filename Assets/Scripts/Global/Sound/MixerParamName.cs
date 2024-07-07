@@ -1,4 +1,4 @@
-﻿namespace GameJamEntry.Scripts.Global.Sound {
+﻿namespace Game.Global.Sound {
 	public enum MixerParamName {
 		MasterVolume = 1,
 		MusicVolume  = 2,

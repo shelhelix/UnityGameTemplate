@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GameJamEntry.Scripts.Global.Sound {
+namespace Game.Global.Sound {
 	[Serializable]
 	public class SoundSettingsControllerPrefsState {
 		public List<MixerEntry> Entries = new();

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GameJamEntry.Scripts.Utils {
+namespace Game.Utils {
 	public class ReactiveValue<T> {
 		public T Value {
 			get => _value;

@@ -3,7 +3,7 @@ using DG.Tweening;
 using GameComponentAttributes.Attributes;
 using UnityEngine;
 
-namespace Com.Shelinc.FullscreenCanvasController.Modules.FullscreenCanvasController {
+namespace Modules.FullscreenCanvasController {
 	public class BaseScreen : MonoBehaviour {
 		[Header("transition params")]
 		[NotNullReference] public CanvasGroup CanvasGroup;
