@@ -2,10 +2,10 @@
 using Modules.SceneTransitionEffects.Transitions;
 using UnityEngine.SceneManagement;
 
-namespace Modules.SceneTransitionEffects {
+namespace Game.Global {
 	public class SceneLoader {
-		public const string MainMenuSceneName = "MainMenu";
-		public const string GameplaySceneName = "Gameplay";
+		public const string GameplayScene = "Gameplay";
+		public const string MainMenuScene = "MainMenu";
 		
 		readonly ISceneTransition _transition;
 

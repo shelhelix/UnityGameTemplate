@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 namespace Game.MainMenu.UI.GameSettings {
-	public class SoundSettingsBlock : MonoBehaviour {
+	public class SoundSettingView : MonoBehaviour {
 		[NotNullReference] public Slider Slider;
 
 		SoundSettingsController _controller;

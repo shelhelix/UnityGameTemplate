@@ -1,4 +1,4 @@
-﻿using Modules.SceneTransitionEffects;
+﻿using Game.Global;
 using VContainer;
 using VContainer.Unity;
 

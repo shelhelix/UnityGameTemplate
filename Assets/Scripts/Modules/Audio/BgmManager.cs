@@ -23,6 +23,9 @@ namespace Modules.Audio {
 		}
 
 		public void PlayNextSong() {
+			if ( _activeClips.Count == 0 ) {
+				return;
+			}
 			if ( !IsValidIndex(_currentClipIndex) ) {
 				Debug.LogError("Can't start next BGM. Index is invalid");
 				return;
@@ -36,6 +39,9 @@ namespace Modules.Audio {
 		}
 
 		void PlayCurrentClip() {
+			if ( _activeClips.Count == 0 ) {
+				return;
+			}
 			if ( !IsValidIndex(_currentClipIndex) ) {
 				Debug.LogError("Can't play current clip cause index is out of range");
 				return;
