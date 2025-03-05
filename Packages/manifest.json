@@ -3,6 +3,7 @@
     "com.cysharp.unitask": "2.5.0",
     "com.dbrizov.naughtyattributes": "https://github.com/dbrizov/NaughtyAttributes.git#upm",
     "com.ems.main-scene-auto-loading": "https://github.com/shelhelix/unity-main-scene-auto-loading-fork.git?path=/Packages/Ems.MainSceneAutoLoading",
+    "com.jsteinhauer.unitydomainreloadhelper": "https://github.com/joshcamas/unity-domain-reload-helper.git",
     "com.ultrashel.asynctimer": "https://github.com/shelhelix/AsyncTimer.git",
     "com.ultrashel.gamecomponentattributes": "https://github.com/shelhelix/GameComponentAttributes.git",
     "com.unity.feature.2d": "2.0.0",

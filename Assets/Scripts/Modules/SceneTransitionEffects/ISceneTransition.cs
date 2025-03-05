@@ -1,6 +1,6 @@
 ﻿using Cysharp.Threading.Tasks;
 
-namespace Modules.SceneTransitionEffects.Transitions  {
+namespace Com.Shelinc.SceneTransitionEffects.Modules.SceneTransitionEffects  {
 	public interface ISceneTransition {
 		public UniTask HideScenes();
 		public UniTask ShowScenes();

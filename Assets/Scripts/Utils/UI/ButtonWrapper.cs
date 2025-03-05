@@ -1,5 +1,5 @@
-﻿using GameComponentAttributes.Attributes;
-using Modules.Audio;
+﻿using Com.Shelinc.GlobalAudio.Modules.GlobalAudio;
+using GameComponentAttributes.Attributes;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
