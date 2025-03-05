@@ -38,12 +38,12 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 12
+  serializedVersion: 13
+  m_BakeOnSceneLoad: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -2107,7 +2107,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 302933374866500579, guid: 87fe6e1e33bf24e438bebf52fdb207e5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 480.83408
+      value: 480.83405
       objectReference: {fileID: 0}
     - target: {fileID: 302933374866500579, guid: 87fe6e1e33bf24e438bebf52fdb207e5, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2199,7 +2199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bgms:
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 43751c6c9f2be3e41a5df9d2f392062f, type: 3}
   Group: {fileID: 1245396580}
   PlayButton: {fileID: 245400330}
   SettingsButton: {fileID: 36609804}
@@ -2429,7 +2429,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 302933374866500579, guid: 87fe6e1e33bf24e438bebf52fdb207e5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 480.83408
+      value: 480.83405
       objectReference: {fileID: 0}
     - target: {fileID: 302933374866500579, guid: 87fe6e1e33bf24e438bebf52fdb207e5, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3172,7 +3172,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 302933374866500579, guid: 87fe6e1e33bf24e438bebf52fdb207e5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 480.83408
+      value: 480.83405
       objectReference: {fileID: 0}
     - target: {fileID: 302933374866500579, guid: 87fe6e1e33bf24e438bebf52fdb207e5, type: 3}
       propertyPath: m_AnchoredPosition.y
