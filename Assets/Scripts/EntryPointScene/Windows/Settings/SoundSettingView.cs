@@ -1,11 +1,11 @@
 ﻿using Game.GlobalContext.Sound;
-using GameComponentAttributes.Attributes;
+using TriInspector;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace Game.EntryPointScene.Windows.Settings {
 	public class SoundSettingView : MonoBehaviour {
-		[NotNullReference] public Slider Slider;
+		[Required] public Slider Slider;
 
 		SoundSettingsController _controller;
 		MixerParamName           _mixerParamName;

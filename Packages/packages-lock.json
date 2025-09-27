@@ -40,13 +40,6 @@
         "com.cysharp.unitask": "2.3.1"
       }
     },
-    "com.ultrashel.gamecomponentattributes": {
-      "version": "https://github.com/shelhelix/GameComponentAttributes.git",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "3bdaaf4e860e6c4c00e8a36737876c2c89ba3540"
-    },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
       "depth": 0,

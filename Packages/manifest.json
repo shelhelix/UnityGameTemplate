@@ -5,7 +5,6 @@
     "com.ems.main-scene-auto-loading": "https://github.com/shelhelix/unity-main-scene-auto-loading-fork.git?path=/Packages/Ems.MainSceneAutoLoading",
     "com.jsteinhauer.unitydomainreloadhelper": "https://github.com/joshcamas/unity-domain-reload-helper.git",
     "com.ultrashel.asynctimer": "https://github.com/shelhelix/AsyncTimer.git",
-    "com.ultrashel.gamecomponentattributes": "https://github.com/shelhelix/GameComponentAttributes.git",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.ide.rider": "3.0.38",
     "com.unity.render-pipelines.universal": "17.0.4",

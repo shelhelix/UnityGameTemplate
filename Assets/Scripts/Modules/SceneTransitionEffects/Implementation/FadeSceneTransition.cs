@@ -1,14 +1,14 @@
 ﻿using Cysharp.Threading.Tasks;
 using DG.Tweening;
-using GameComponentAttributes.Attributes;
+using TriInspector;
 using UnityEngine;
 
 namespace Com.Shelinc.SceneTransitionEffects.Modules.SceneTransitionEffects.Implementation {
 	public class FadeSceneTransition :  MonoBehaviour, ISceneTransition {
 		public const string ResourcePath = "SceneTransitions/FadeSceneTransition";
 		
-		[NotNullReference] public Canvas      Canvas;
-		[NotNullReference] public CanvasGroup CanvasGroup;
+		[Required] public Canvas      Canvas;
+		[Required] public CanvasGroup CanvasGroup;
 		
 		protected void Start() {
 			Canvas.gameObject.SetActive(false);

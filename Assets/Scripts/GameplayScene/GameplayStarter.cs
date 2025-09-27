@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using Com.Shelinc.GlobalAudio.Modules.GlobalAudio;
-using GameComponentAttributes.Attributes;
+using TriInspector;
 using UnityEngine;
 using VContainer;
 
 namespace Game.GameplayScene {
 	public class GameplayStarter : MonoBehaviour {
-		[NotNullReference] public List<AudioClip> Bgms;
+		[Required] public List<AudioClip> Bgms;
 
 		[Inject]
 		public void Init(BgmManager bgmManager) {

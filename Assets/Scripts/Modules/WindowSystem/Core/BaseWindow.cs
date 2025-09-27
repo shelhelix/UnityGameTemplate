@@ -1,12 +1,12 @@
 ﻿using System.Threading;
 using Com.Shelinc.WindowSystem.Modules.WindowSystem.Utils;
 using Cysharp.Threading.Tasks;
-using GameComponentAttributes.Attributes;
+using TriInspector;
 using UnityEngine;
 
 namespace Com.Shelinc.WindowSystem.Modules.WindowSystem.Core {
 	public abstract class BaseWindow : MonoBehaviour {
-		[NotNullReference] public BaseWindowAnimationProvider AnimationProvider;
+		[Required] public BaseWindowAnimationProvider AnimationProvider;
 
 		CancellationTokenSource _source = new();
 

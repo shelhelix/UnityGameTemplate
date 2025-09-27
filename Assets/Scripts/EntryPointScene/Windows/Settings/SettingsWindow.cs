@@ -3,15 +3,15 @@ using Com.Shelinc.WindowSystem.Modules.WindowSystem.Core.Implementation;
 using Cysharp.Threading.Tasks;
 using Game.GlobalContext.Sound;
 using Game.Utils.UI;
-using GameComponentAttributes.Attributes;
+using TriInspector;
 using VContainer;
 
 namespace Game.EntryPointScene.Windows.Settings {
 	public class SettingsWindow : BaseWindow {
-		[NotNullReference] public ButtonWrapper      ReturnButton;
-		[NotNullReference] public SoundSettingView masterSettingViews;
-		[NotNullReference] public SoundSettingView musicSettingViews;
-		[NotNullReference] public SoundSettingView sfxSettingViews;
+		[Required] public ButtonWrapper      ReturnButton;
+		[Required] public SoundSettingView masterSettingViews;
+		[Required] public SoundSettingView musicSettingViews;
+		[Required] public SoundSettingView sfxSettingViews;
 		
 		public static IShowRequest CreateShowRequest() => new NoParamsShowRequest<SettingsWindow>();
 		

@@ -1,12 +1,12 @@
 ﻿using System.Threading;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
-using GameComponentAttributes.Attributes;
+using TriInspector;
 using UnityEngine;
 
 namespace Com.Shelinc.WindowSystem.Modules.WindowSystem.Core.Implementation {
 	public class FadeWindowAnimationProvider : BaseWindowAnimationProvider {
-		[NotNullReference] public CanvasGroup CanvasGroup;
+		[Required] public CanvasGroup CanvasGroup;
 
 		public float AppearAnimationTime    = 0.4f;
 		public float DisappearAnimationTime = 0.3f;

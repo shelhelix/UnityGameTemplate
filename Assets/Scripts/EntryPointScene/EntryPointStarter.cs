@@ -7,7 +7,7 @@ using Game.EntryPointScene.Windows.Settings;
 using Game.GlobalContext;
 using Game.Utils;
 using Game.Utils.UI;
-using GameComponentAttributes.Attributes;
+using TriInspector;
 using UnityEditor;
 using UnityEngine;
 using VContainer;
@@ -16,15 +16,15 @@ namespace Game.EntryPointScene {
 	public class EntryPointStarter : MonoBehaviour {
 		const string JamLink = "add link to jam here";
 		
-		[NotNullReference] public List<AudioClip> Bgms;
+		[Required] public List<AudioClip> Bgms;
 
 		// canvas group for animation
-		[NotNullReference] public CanvasGroup Group;
+		[Required] public CanvasGroup Group;
 		
-		[NotNullReference] public ButtonWrapper PlayButton;
-		[NotNullReference] public ButtonWrapper SettingsButton;
-		[NotNullReference] public ButtonWrapper JamLinkButton;
-		[NotNullReference] public ButtonWrapper ExitButton;
+		[Required] public ButtonWrapper PlayButton;
+		[Required] public ButtonWrapper SettingsButton;
+		[Required] public ButtonWrapper JamLinkButton;
+		[Required] public ButtonWrapper ExitButton;
 
 		[Inject]
 		public void Init(BgmManager bgmManager, SceneLoader sceneLoader, WindowManager windowManager) {

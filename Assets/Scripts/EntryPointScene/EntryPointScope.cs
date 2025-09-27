@@ -1,12 +1,12 @@
 ﻿using Com.Shelinc.WindowSystem.Modules.WindowSystem;
 using Game.GlobalContext;
-using GameComponentAttributes.Attributes;
+using TriInspector;
 using VContainer;
 using VContainer.Unity;
 
 namespace Game.EntryPointScene {
 	public class EntryPointScope : LifetimeScope {
-		[NotNullReference] public WindowManager WindowManager;
+		[Required] public WindowManager WindowManager;
 		
 		protected override void Configure(IContainerBuilder builder) {
 			base.Configure(builder);

@@ -1,11 +1,11 @@
-﻿using GameComponentAttributes.Attributes;
+﻿using TriInspector;
 using UnityEngine;
 using UnityEngine.Audio;
 
 namespace Com.Shelinc.GlobalAudio.Modules.GlobalAudio {
 	public class AudioElements : MonoBehaviour {
-		[NotNullReference] public AudioSource BgmPlayer;
-		[NotNullReference] public AudioSource SfxPlayer;
-		[NotNullReference] public AudioMixer  Mixer;
+		[Required] public AudioSource BgmPlayer;
+		[Required] public AudioSource SfxPlayer;
+		[Required] public AudioMixer  Mixer;
 	}
 }

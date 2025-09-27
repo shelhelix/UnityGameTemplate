@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Com.Shelinc.WindowSystem.Modules.WindowSystem.Core;
-using GameComponentAttributes.Attributes;
+using TriInspector;
 using UnityEngine;
 
 namespace Com.Shelinc.WindowSystem.Modules.WindowSystem {
 	public class WindowManager : MonoBehaviour {
-		[NotNullReference] public List<BaseWindow> Windows;
+		[Required] public List<BaseWindow> Windows;
 		
 		List<BaseWindow> _windowStack = new();
 

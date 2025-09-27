@@ -1,5 +1,5 @@
 ﻿using Com.Shelinc.GlobalAudio.Modules.GlobalAudio;
-using GameComponentAttributes.Attributes;
+using TriInspector;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -8,7 +8,7 @@ using VContainer;
 namespace Game.Utils.UI {
 	[RequireComponent(typeof(Button))]
 	public sealed class ButtonWrapper : MonoBehaviour {
-		[NotNullReference] public Button    Button;
+		[Required] public Button    Button;
 		
 		public AudioClip ClickSound;
 
