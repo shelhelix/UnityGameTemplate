@@ -1,19 +1,20 @@
 {
   "dependencies": {
     "com.codewriter.triinspector": "https://github.com/codewriter-packages/Tri-Inspector.git",
-    "com.cysharp.unitask": "2.5.10",
-    "com.ems.main-scene-auto-loading": "https://github.com/shelhelix/unity-main-scene-auto-loading-fork.git?path=/Packages/Ems.MainSceneAutoLoading",
+    "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
+    "com.ems.main-scene-auto-loading": "https://github.com/EmreDogann/unity-main-scene-auto-loading.git#upm",
     "com.jsteinhauer.unitydomainreloadhelper": "https://github.com/joshcamas/unity-domain-reload-helper.git",
     "com.ultrashel.asynctimer": "https://github.com/shelhelix/AsyncTimer.git",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.ide.rider": "3.0.38",
-    "com.unity.render-pipelines.universal": "17.0.4",
-    "com.unity.test-framework": "1.5.1",
-    "com.unity.timeline": "1.8.9",
+    "com.unity.render-pipelines.universal": "17.3.0",
+    "com.unity.test-framework": "1.6.0",
+    "com.unity.timeline": "1.8.10",
     "com.unity.ugui": "2.0.0",
-    "com.unity.visualeffectgraph": "17.0.4",
-    "jp.hadashikick.vcontainer": "1.17.0",
+    "com.unity.visualeffectgraph": "17.3.0",
+    "jp.hadashikick.vcontainer": "https://github.com/hadashiA/VContainer.git?path=VContainer/Assets/VContainer",
     "com.unity.modules.accessibility": "1.0.0",
+    "com.unity.modules.adaptiveperformance": "1.0.0",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
@@ -40,22 +41,12 @@
     "com.unity.modules.unitywebrequestaudio": "1.0.0",
     "com.unity.modules.unitywebrequesttexture": "1.0.0",
     "com.unity.modules.unitywebrequestwww": "1.0.0",
+    "com.unity.modules.vectorgraphics": "1.0.0",
     "com.unity.modules.vehicles": "1.0.0",
     "com.unity.modules.video": "1.0.0",
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
   },
-  "scopedRegistries": [
-    {
-      "name": "package.openupm.com",
-      "url": "https://package.openupm.com",
-      "scopes": [
-        "com.cysharp.unitask",
-        "com.demigiant.dotween",
-        "com.openupm",
-        "jp.hadashikick.vcontainer"
-      ]
-    }
-  ]
+  "scopedRegistries": []
 }
